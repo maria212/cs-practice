@@ -1,5 +1,5 @@
-function createBitAccessor(array) {
-    const checkArrIndex = (arrIndex) => {
+function createBitAccessor(array: Uint8Array) {
+    const checkArrIndex = (arrIndex: number) => {
         if (array.length <= arrIndex) {
             throw Error(`arrIndex must be less then ${array.length}`);
         }
@@ -11,20 +11,20 @@ function createBitAccessor(array) {
         }
     }
 
-    const getBitsValue = (arrIndex, bitsOrder) => {
+    const getBitsValue = (arrIndex: number, bitsOrder: number): number => {
         const mask = 1 << (bitsOrder - 1);
         return +((array[arrIndex] & mask) !== 0);
     }
 
-    const getResultBits = (result) => Number(result).toString(2);
+    const getResultBits = (result: number): string => Number(result).toString(2);
 
     return {
-        get: (arrIndex, bitsOrder) => {
+        get: (arrIndex: number, bitsOrder: number) => {
             checkArrIndex(arrIndex);
             checkBitsOrder(bitsOrder);
             return getBitsValue(arrIndex, bitsOrder);
         },
-        set: (arrIndex, bitsOrder, newValue) => {
+        set: (arrIndex: number, bitsOrder: number, newValue: 0 | 1) => {
             checkArrIndex(arrIndex);
             checkBitsOrder(bitsOrder);
             if (newValue !== 1 && newValue !== 0) {
