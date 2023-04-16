@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+        function draw() {
+            const canvas = document.getElementById('canvas');
+            const context = canvas.getContext('2d');
+            const img = new Image();
+            img.src = "cat1.png";
+            img.onload = () => {
+                context.drawImage(img, 0, 0);
+            };
+        }
+    </script>
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body onload="draw();">
+<canvas id="canvas" width="320" height="359"></canvas>
+</body>
+</html>
