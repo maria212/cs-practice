@@ -9,7 +9,7 @@
 * [Как работает кэш процессора](https://www.youtube.com/watch?v=7n_8cOBpQrg)
 
 ## Написать фильтры для изображения в Canvas
-
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ```js
 // Необходимо написать функции, которые бы принимали ссылку на изображение или canvas и применяла бы к нему один из эффектов.
 // Например, инверсия цветов или оттенки серого. Для реализации эффектов, необходимо использовать методы Canvas getImageData/putImageData
