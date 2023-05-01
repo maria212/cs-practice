@@ -1,18 +1,6 @@
-class Link {
-    data: unknown;
-    next: Link = null;
-    prev: Link = null;
-
-    constructor(data) {
-        this.data = data;
-    }
-
-    display() {
-        console.log(`data: ${this.data}, prev: ${this.prev?.data}, next: ${this.next?.data}`)
-    }
-}
-
 // Task 1
+import { Link } from "./link.js";
+
 export class IterablyLinkedList {
     #first: Link = null;
     #last: Link = null;
@@ -124,23 +112,25 @@ class ListIterator {
     }
 }
 
-const myList = new IterablyLinkedList();
-myList.addLast(1);
-myList.addLast(2);
-myList.addLast(3);
-myList.addLast(4);
-myList.addLast(5);
-myList.addFirst(0);
-myList.addFirst(-1);
-myList.showList();
-console.log('--------------------------------')
-myList.removeLast();
-myList.removeFirst()
+export const checkIterator = () => {
+    const myList = new IterablyLinkedList();
+    myList.addLast(1);
+    myList.addLast(2);
+    myList.addLast(3);
+    myList.addLast(4);
+    myList.addLast(5);
+    myList.addFirst(0);
+    myList.addFirst(-1);
+    myList.showList();
+    console.log('--------------------------------')
+    myList.removeLast();
+    myList.removeFirst()
 
-const iterator = myList.getIterator();
-while (!iterator.atEnd()) {
-    console.log('current iterator', iterator.getCurrent())
-    iterator.nextLink();
+    const iterator = myList.getIterator();
+    while (!iterator.atEnd()) {
+        console.log('current iterator', iterator.getCurrent())
+        iterator.nextLink();
+    }
 }
 
 

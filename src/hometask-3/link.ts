@@ -3,7 +3,7 @@ export class Link {
     next: Link = null;
     prev: Link = null;
 
-    constructor(data) {
+    constructor(data: unknown) {
         this.data = data;
     }
 

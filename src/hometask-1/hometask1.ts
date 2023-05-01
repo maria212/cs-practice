@@ -5,7 +5,7 @@ function createBitAccessor(array: Uint8Array) {
         }
     }
 
-    function checkBitsOrder(bitsOrder) {
+    function checkBitsOrder(bitsOrder: number) {
         if (bitsOrder > 8) {
             throw Error('Number must be less then 8');
         }
