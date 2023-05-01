@@ -1,4 +1,4 @@
-import { Link } from "./link";
+import { Link } from "./link.js";
 
 // Task 1
 export class DoublyLinkedList {
@@ -17,6 +17,10 @@ export class DoublyLinkedList {
         }
         console.log('first - ', this.#first.data);
         console.log('last - ', this.#last.data);
+    }
+
+    getFirst(): Link {
+        return  this.#first;
     }
 
     addFirst(data: unknown) {
