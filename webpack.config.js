@@ -1,3 +1,4 @@
+/*
 module.exports = {
     entry: "./src/index.ts",
     output: {
@@ -19,3 +20,4 @@ module.exports = {
     },
     // Other options...
 };
+*/
